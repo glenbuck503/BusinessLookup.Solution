@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLookup.Models
 {
-    public class Business
+    public class Restaurant
     {
         public int RestaurantId { get; set; }
         [Required]
@@ -13,7 +13,7 @@ namespace BusinessLookup.Models
         [Required]
         public string Food { get; set; }
      
-        public int Number { get; set; }
+        public string Number { get; set; }
     
     
         
