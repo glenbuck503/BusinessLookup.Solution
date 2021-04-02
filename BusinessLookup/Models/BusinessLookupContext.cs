@@ -14,7 +14,9 @@ namespace BusinessLookup.Models
         {
           builder.Entity<Shop>()
           .HasData(
-             new Shop { ShopId = 1, Name = "dfdsfs", Goods = "yeehaw", Number = "7"}
+             new Shop { ShopId = 1, Name = "first shop", Goods = "yeehaw", Number = "1900"},
+             new Shop { ShopId = 2, Name = "second shop", Goods = "second", Number = "livelinks"},
+             new Shop { ShopId = 3, Name = "third shop", Goods = "third", Number = "goodbye c#"}
             
           );
         }
