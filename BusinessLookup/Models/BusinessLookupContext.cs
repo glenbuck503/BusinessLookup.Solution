@@ -19,6 +19,14 @@ namespace BusinessLookup.Models
              new Shop { ShopId = 3, Name = "third shop", Goods = "third", Number = "goodbye c#"}
             
           );
+
+          builder.Entity<Restaurant>()
+          .HasData(
+             new Restaurant { RestaurantId = 1, Name = "first restaurant", Food = "yeehaw", Number = "555"},
+             new Restaurant { RestaurantId = 2, Name = "second restaurant", Food = "second", Number = "222"},
+             new Restaurant { RestaurantId= 3, Name = "third restaurant", Food = "third", Number = "503"}
+            
+          );
         }
 
   

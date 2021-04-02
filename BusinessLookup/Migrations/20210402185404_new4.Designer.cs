@@ -2,14 +2,16 @@
 using BusinessLookup.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BusinessLookup.Migrations
 {
     [DbContext(typeof(BusinessLookupContext))]
-    partial class BusinessLookupContextModelSnapshot : ModelSnapshot
+    [Migration("20210402185404_new4")]
+    partial class new4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
