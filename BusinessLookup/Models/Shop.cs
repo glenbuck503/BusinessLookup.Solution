@@ -7,8 +7,7 @@ namespace BusinessLookup.Models
     public class Shop
     {
         public int ShopId { get; set; }
-        [Required]
-        [StringLength(20)]
+
         public string Name { get; set; }
      
         public string Goods { get; set; }

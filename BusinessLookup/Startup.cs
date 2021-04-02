@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using BusinessLookup.Models;
 
 
-namespace BuisnessLookup
+namespace BusinessLookup
 {
     public class Startup
     {
@@ -19,7 +19,7 @@ namespace BuisnessLookup
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+       public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddDbContext<BusinessLookupContext>(opt =>
@@ -34,16 +34,11 @@ namespace BuisnessLookup
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BusinessLookup v1"));
             }
 
             // app.UseHttpsRedirection();
-            app.UseSwagger();
-             app.UseSwaggerUI(c =>
-            {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            c.RoutePrefix = string.Empty;
-            });
-           
 
             app.UseRouting();
 

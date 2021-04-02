@@ -10,11 +10,21 @@ namespace BusinessLookup.Models
     {
     }
 
+    protected override void OnModelCreating(ModelBuilder builder)
+        {
+          builder.Entity<Shop>()
+          .HasData(
+             new Shop { ShopId = 1, Name = "dfdsfs", Goods = "Woolly Mammoth", Number = "7"}
+            
+          );
+        }
+
   
     
     
-      public DbSet<Restaurant> Restaurants { get; set; }
+   
       public DbSet<Shop> Shops { get; set; }
+       public DbSet<Restaurant> Restaurants { get; set; }
 
     
   }
