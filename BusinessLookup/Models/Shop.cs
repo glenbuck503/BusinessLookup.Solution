@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-using System;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace BusinessLookup.Models
 {

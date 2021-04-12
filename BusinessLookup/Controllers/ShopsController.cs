@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BusinessLookup.Models;
@@ -20,7 +18,7 @@ namespace BusinessLookup.Controllers
       _db = db;
     }
 
-    // GET api/animals
+   
 [HttpGet]
 public ActionResult<IEnumerable<Shop>> Get(string name, string goods, string number)
 {
@@ -48,7 +46,7 @@ public ActionResult<IEnumerable<Shop>> Get(string name, string goods, string num
 }
 
 
-    // GET: api/Animals/5
+   
     [HttpGet("{id}")]
     public async Task<ActionResult<Shop>> GetShop(int id)
     {
@@ -62,8 +60,7 @@ public ActionResult<IEnumerable<Shop>> Get(string name, string goods, string num
         return shop;
     }
 
-    // PUT: api/Animals/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Shop shop)
     {
@@ -93,7 +90,7 @@ public ActionResult<IEnumerable<Shop>> Get(string name, string goods, string num
       return NoContent();
     }
 
-    // POST: api/Animals
+    
     [HttpPost]
     public async Task<ActionResult<Shop>> Post(Shop shop)
     {
@@ -103,7 +100,7 @@ public ActionResult<IEnumerable<Shop>> Get(string name, string goods, string num
       return CreatedAtAction(nameof(GetShop), new { id = shop.ShopId }, shop);
     }
 
-    // DELETE: api/Animals/5
+  
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteShop(int id)
     {

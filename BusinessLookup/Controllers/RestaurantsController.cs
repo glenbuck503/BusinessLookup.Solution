@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BusinessLookup.Models;
@@ -20,7 +18,6 @@ namespace BusinessLookup.Controllers
       _db = db;
     }
 
-    // GET api/animals
 [HttpGet]
 public ActionResult<IEnumerable<Restaurant>> Get(string name, string food, string number)
 {
@@ -48,7 +45,7 @@ public ActionResult<IEnumerable<Restaurant>> Get(string name, string food, strin
 }
 
 
-    // GET: api/Animals/5
+    
     [HttpGet("{id}")]
     public async Task<ActionResult<Restaurant>> GetRestaurant(int id)
     {
@@ -62,8 +59,7 @@ public ActionResult<IEnumerable<Restaurant>> Get(string name, string food, strin
         return restaurant;
     }
 
-    // PUT: api/Animals/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Restaurant restaurant)
     {
@@ -93,7 +89,7 @@ public ActionResult<IEnumerable<Restaurant>> Get(string name, string food, strin
       return NoContent();
     }
 
-    // POST: api/Animals
+    
     [HttpPost]
     public async Task<ActionResult<Restaurant>> Post(Restaurant restaurant)
     {
@@ -103,7 +99,7 @@ public ActionResult<IEnumerable<Restaurant>> Get(string name, string food, strin
       return CreatedAtAction(nameof(GetRestaurant), new { id = restaurant.RestaurantId }, restaurant);
     }
 
-    // DELETE: api/Animals/5
+ 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteRestaurant(int id)
     {

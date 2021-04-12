@@ -64,7 +64,7 @@ The body for each restaurant should look like this:
 To look up a restaurant by ID number in your browser, navigate to http://localhost:5000/restaurant/[choose ID number]. Where choose ID number, enter in an ID number for a restaurant.
 
 
-* If you go to the Post endpoint for Restaurants, click "try it out" and then a body template will show up that will look like this:
+* If you go to the POST endpoint for Restaurants, click "try it out" and then a body template will show up that will look like this:
 
 {
   "restaurantId": 0,
@@ -76,9 +76,25 @@ To look up a restaurant by ID number in your browser, navigate to http://localho
 From here, you can edit those properties in any way you want and then click "try it out" and then it will add the new restaurant to the list of restaurents. To verify, you can go back to the GET endpoint, and click "try it out" and then "execute" and you will see the new updated lists of restaurants.
 
 
+* The PUT endpoint will allow you to edit existing items. If you go to the PUT endpoint for Restaurants, click "try it out" and a body template will come up that will look like this:
+
+{
+  "restaurantId": 0,
+  "name": "stridfdfng",
+  "food": "string",
+  "number": "string"
+}
+
+You will have to enter an ID number in the box before this before you can edit. Now you can edit the existing restaurant ID.
+
+* The DELETE endpoint lets you delete a restaurant by ID. If you want to delete a restaurant, go to the DELETE endpoint and then click "try it out", type in the ID of the restaurant that you want to delete, and then click "execute". To verify it properly deleted, go back to the GET endpoint and see the list of restaurants.
 
 
-## No known bugs as of 4/9/2021
+NOTE: You can use these methods the exact same way with Shops.
+
+
+
+## No known bugs as of 4/11/2021
 
 ## Support and contact details
 
