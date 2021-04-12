@@ -51,14 +51,18 @@ Repository: https://github.com/glenbuck503/BusinessLookup.Solution.git
 * If you go to the GET endpoint for Restaurants, click "try it out" and then "execute" and it will show a list of all Restaurants.
 
 The body for each restaurant should look like this:
-[
+
   {
-    "restaurantId": 0,
-    "name": "string",
-    "food": "string",
-    "number": "string"
+    
+    "restaurantId": 0,  
+    "name": string,  
+    "food": string,
+    "number": string,  
+  
   }
-]
+  
+  
+
 
 -make sure you press clear in swagger before doing this next step-
 To look up a restaurant by ID number in your browser, navigate to http://localhost:5000/restaurant/[choose ID number]. Where choose ID number, enter in an ID number for a restaurant.
@@ -66,24 +70,28 @@ To look up a restaurant by ID number in your browser, navigate to http://localho
 
 * If you go to the POST endpoint for Restaurants, click "try it out" and then a body template will show up that will look like this:
 
-{
-  "restaurantId": 0,
-  "name": "string",
-  "food": "string",
-  "number": "string"
-}
+    {
+
+      "restaurantId": 0,
+      "name": "string",
+      "food": "string",
+      "number": "string"
+
+    }
 
 From here, you can edit those properties in any way you want and then click "try it out" and then it will add the new restaurant to the list of restaurents. To verify, you can go back to the GET endpoint, and click "try it out" and then "execute" and you will see the new updated lists of restaurants.
 
 
 * The PUT endpoint will allow you to edit existing items. If you go to the PUT endpoint for Restaurants, click "try it out" and a body template will come up that will look like this:
 
-{
-  "restaurantId": 0,
-  "name": "stridfdfng",
-  "food": "string",
-  "number": "string"
-}
+  {
+   
+      "restaurantId": 0
+      "name": "stridfdfng"
+      "food": "string"
+      "number": "string"
+   
+  }
 
 You will have to enter an ID number in the box before this before you can edit. Now you can edit the existing restaurant ID.
 
